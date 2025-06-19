@@ -30,28 +30,7 @@ namespace top.ebiz.service.Controllers.Traveler_Profile
             return id.ToString();
         }
 
-        // POST: api/Controller name
-        //[ValidateAntiForgeryToken]
-        [IgnoreAntiforgeryToken]
-        [HttpPost("SendMailTestThaioilgroup", Name = "SendMailTestThaioilgroup")]
-        public IActionResult Post()
-        {
-            ClassMail443 swemail = new ClassMail443();
-             
-            string ret = "";
-            string msg_error = "";
-            try
-            {
-               // ret = swemail.SendMail_Normal();
-                ret = swemail.send_mail();
-            }
-            catch (Exception ex)
-            {
-                ret = "false";
-                msg_error = ex.Message.ToString();
-            } 
-            return Ok(msg_error);
-        }
+   
 
         // PUT: api/Controller name/5
 
